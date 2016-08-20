@@ -5,8 +5,8 @@ Automation is performed by [selenium](http://selenium-python.readthedocs.io/) we
 
 You probably need python 3.4+ to use this package
 
-
-    $ cd invenio_uploader
+    $ git clone https://github.com/tumregels/invenio_auto_submitter.git
+    $ cd invenio_auto_submitter
     $ pip install -r requirements.txt
     $ python main.py --username your_username --password your_password
 
