@@ -89,7 +89,6 @@ def find_by_xpath(locator):
 
 
 def login(username, password):
-    # login
     browser.get("http://inveniodomain.com/youraccount/login")
     browser.find_element_by_xpath("//input[@id='p_un']").send_keys(username)
     browser.find_element_by_xpath("//input[@id='p_pw']").send_keys(password)
@@ -97,14 +96,12 @@ def login(username, password):
 
 
 def choose_preprint():
-    # go to preprint page
     browser.get('http://inveniodomain.com/submit?ln=en&doctype=DEMOART')
     find_by_xpath(".//input[@id='comboPREPRINT' and @value='PREPRINT']").click()
     find_by_xpath(".//input[@class='adminbutton' and @value='Submit New Record']").click()
 
 
 def fill_preprint(p):
-    # fill in preprint fields
     find_by_xpath('//tr/td/textarea[@name="DEMOART_REP"]').send_keys(p.ReportNumbers)
     find_by_xpath('//tr/td/textarea[@name="DEMOART_TITLE"]').send_keys(p.Title) if p.Title != 'NULL' else 'Skip'
     find_by_xpath('//tr/td/textarea[@name="DEMOART_AU"]').send_keys(p.Authors) if p.Authors != 'NULL' else 'Skip'
