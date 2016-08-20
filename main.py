@@ -1,15 +1,14 @@
-import os
-import time
-import csv
 import argparse
+import collections
+import csv
+import os
 import textwrap
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
-import collections
 
 Preprint = collections.namedtuple('Preprint', [
     'ReportNumbers',  # 'FileName','RN','TRN',
@@ -122,7 +121,6 @@ def fill_preprint(p):
     find_by_xpath("//input[@id='bibdocfilemanagedocfileuploadbutton']").click()
 
     time.sleep(2.0)
-    # input()
 
 
 def submit_preprint():
@@ -130,7 +128,6 @@ def submit_preprint():
 
 
 if __name__ == '__main__':
-
     parser = argparse.ArgumentParser()
     parser.add_argument('--username', help='invenio username')
     parser.add_argument('--password', help='invenio password')
