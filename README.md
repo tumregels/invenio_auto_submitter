@@ -1,8 +1,9 @@
-# Invenio 1.2.1 Uploader using Selenium
+# Invenio Automated Article Submitter
 
-The aim of this package is to automate upload process of multiple articles/preprints into [Invenio](http://invenio-software.org/)
+The aim of this package is to automate article submission process into [Invenio](http://invenio-software.org/).
+Automation is performed by [selenium](http://selenium-python.readthedocs.io/) webdriver.
 
-You need python 3.4+ to use this package
+You probably need python 3.4+ to use this package
 
 
     $ cd invenio_uploader
